@@ -34,6 +34,12 @@ const LOCALES = {
     addAtLeastOne: 'Add at least one map',
     resetConfirm: 'Reset all settings?',
     cancel: 'Cancel',
+    welcomeText: 'This extension has no viruses, keyloggers, or miners. It is fully open source. Report bugs in Issues, suggest ideas in Discussions, submit features via Pull Requests.',
+    welcomeIssues: 'Issues',
+    welcomeDiscussions: 'Discussions',
+    welcomePullRequests: 'Pull Requests',
+    introTitle: 'Welcome to Faceit Map Position',
+    introGotIt: 'Got it',
     mapCount: (n) => `${n} ${n === 1 ? 'map' : 'maps'}`,
   },
   ru: {
@@ -47,6 +53,12 @@ const LOCALES = {
     addAtLeastOne: 'Добавьте хотя бы одну карту',
     resetConfirm: 'Сбросить все настройки?',
     cancel: 'Отмена',
+    welcomeText: 'Расширение не содержит вирусов, кейлоггеров или майнеров. Исходный код полностью открыт. Сообщайте о багах в Issues, предлагайте идеи в Discussions, добавляйте фичи через Pull Requests.',
+    welcomeIssues: 'Issues',
+    welcomeDiscussions: 'Discussions',
+    welcomePullRequests: 'Pull Requests',
+    introTitle: 'Добро пожаловать в Faceit Map Position',
+    introGotIt: 'Понятно',
     mapCount: (n) => {
       if (n === 1) return `${n} карта`;
       if (n < 5) return `${n} карты`;
@@ -67,6 +79,10 @@ const langBtn = document.getElementById('lang-btn');
 const modal = document.getElementById('modal');
 const modalConfirm = document.getElementById('modal-confirm');
 const modalCancel = document.getElementById('modal-cancel');
+const welcomeEl = document.getElementById('welcome');
+const welcomeClose = document.getElementById('welcome-close');
+const introModal = document.getElementById('modal-intro');
+const introGotIt = document.getElementById('intro-gotit');
 
 let savedState = null;
 let currentTheme = 'dark';
@@ -245,6 +261,11 @@ function applyTheme(theme) {
   chrome.storage.sync.set({ theme });
 }
 
+introGotIt.addEventListener('click', () => {
+  introModal.classList.remove('open');
+  chrome.storage.sync.set({ introSeen: true });
+});
+
 langBtn.addEventListener('click', () => {
   applyLang(currentLang === 'en' ? 'ru' : 'en');
 });
@@ -289,7 +310,7 @@ themeBtns.forEach((btn) => {
 
 enabledCheckbox.addEventListener('change', checkChanges);
 
-chrome.storage.sync.get(['positions', 'enabled', 'theme', 'lang'], (result) => {
+chrome.storage.sync.get(['positions', 'enabled', 'theme', 'lang', 'introSeen'], (result) => {
   const p = result.positions && Object.keys(result.positions).length > 0
     ? result.positions
     : { ...DEFAULT_POSITIONS };
@@ -303,4 +324,8 @@ chrome.storage.sync.get(['positions', 'enabled', 'theme', 'lang'], (result) => {
   applyLang(result.lang || 'en');
   renderPositions();
   checkChanges();
+
+  if (!result.introSeen) {
+    introModal.classList.add('open');
+  }
 });

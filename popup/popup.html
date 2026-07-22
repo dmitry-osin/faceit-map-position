@@ -74,6 +74,39 @@
 
     <div id="status" class="status"></div>
 
+    <div id="welcome" class="welcome-card">
+      <button class="welcome-close" id="welcome-close" title="Dismiss">✕</button>
+      <div class="welcome-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="welcome-body">
+        <p data-i18n="welcomeText">This extension has no viruses, keyloggers, or miners. It is fully open source. Report bugs in Issues, suggest ideas in Discussions, submit features via Pull Requests.</p>
+        <div class="welcome-links">
+          <a href="https://github.com/dmitry-osin/faceit-map-position/issues" target="_blank" rel="noopener" data-i18n="welcomeIssues">Issues</a>
+          <a href="https://github.com/dmitry-osin/faceit-map-position/discussions" target="_blank" rel="noopener" data-i18n="welcomeDiscussions">Discussions</a>
+          <a href="https://github.com/dmitry-osin/faceit-map-position/pulls" target="_blank" rel="noopener" data-i18n="welcomePullRequests">Pull Requests</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-intro">
+      <div class="modal-card modal-card-intro">
+        <div class="modal-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <p class="modal-text intro-title" data-i18n="introTitle">Welcome to Faceit Map Position</p>
+        <p class="modal-text intro-body" data-i18n="welcomeText">This extension has no viruses, keyloggers, or miners. It is fully open source. Report bugs in Issues, suggest ideas in Discussions, submit features via Pull Requests.</p>
+        <div class="intro-links">
+          <a href="https://github.com/dmitry-osin/faceit-map-position/issues" target="_blank" rel="noopener" data-i18n="welcomeIssues">Issues</a>
+          <a href="https://github.com/dmitry-osin/faceit-map-position/discussions" target="_blank" rel="noopener" data-i18n="welcomeDiscussions">Discussions</a>
+          <a href="https://github.com/dmitry-osin/faceit-map-position/pulls" target="_blank" rel="noopener" data-i18n="welcomePullRequests">Pull Requests</a>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="intro-gotit" data-i18n="introGotIt">Got it</button>
+        </div>
+      </div>
+    </div>
+
     <div class="modal-overlay" id="modal">
       <div class="modal-card">
         <div class="modal-icon">
