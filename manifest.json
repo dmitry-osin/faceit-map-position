@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Faceit Map Position",
+  "version": "1.0.0",
+  "author": "Dmitry Osin",
+  "homepage_url": "https://github.com/dmitry-osin/faceit-map-position",
+  "description": "Auto-sends your preferred position to the Faceit chat based on the map",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.faceit.com/*"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Faceit Map Position"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.faceit.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
