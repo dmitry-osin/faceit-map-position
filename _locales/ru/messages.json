@@ -1,0 +1,59 @@
+{
+  "extName": {
+    "message": "Faceit Map Position"
+  },
+  "extDescription": {
+    "message": "Автоматически отправляет выбранную позицию в чат Faceit в зависимости от карты"
+  },
+  "extTitle": {
+    "message": "Faceit Map Position"
+  },
+  "enabledTitle": {
+    "message": "Расширение активно"
+  },
+  "enabledDesc": {
+    "message": "Автоматически отправлять позицию в чат"
+  },
+  "mapSettings": {
+    "message": "Настройка карт"
+  },
+  "addMap": {
+    "message": "Добавить карту"
+  },
+  "save": {
+    "message": "Сохранить"
+  },
+  "reset": {
+    "message": "Сбросить"
+  },
+  "saved": {
+    "message": "Сохранено!"
+  },
+  "addAtLeastOne": {
+    "message": "Добавьте хотя бы одну карту"
+  },
+  "resetConfirm": {
+    "message": "Сбросить все настройки?"
+  },
+  "cancel": {
+    "message": "Отмена"
+  },
+  "welcomeText": {
+    "message": "Расширение не содержит вирусов, кейлоггеров или майнеров. Исходный код полностью открыт. Сообщайте о багах в Issues, предлагайте идеи в Discussions, добавляйте фичи через Pull Requests."
+  },
+  "welcomeIssues": {
+    "message": "Issues"
+  },
+  "welcomeDiscussions": {
+    "message": "Discussions"
+  },
+  "welcomePullRequests": {
+    "message": "Pull Requests"
+  },
+  "introTitle": {
+    "message": "Добро пожаловать в Faceit Map Position"
+  },
+  "introGotIt": {
+    "message": "Понятно"
+  }
+}

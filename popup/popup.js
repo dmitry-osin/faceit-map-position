@@ -89,6 +89,11 @@ let currentTheme = 'dark';
 let currentLang = 'en';
 
 function t(key, ...args) {
+  const hasOverride = currentLang !== chrome.i18n.getUILanguage().slice(0, 2);
+  if (!hasOverride && typeof LOCALES[currentLang][key] !== 'function') {
+    const msg = chrome.i18n.getMessage(key);
+    if (msg) return msg;
+  }
   const msg = LOCALES[currentLang][key];
   return typeof msg === 'function' ? msg(...args) : msg;
 }

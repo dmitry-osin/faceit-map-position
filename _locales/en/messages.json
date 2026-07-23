@@ -1,0 +1,59 @@
+{
+  "extName": {
+    "message": "Faceit Map Position"
+  },
+  "extDescription": {
+    "message": "Auto-sends your preferred position to the Faceit chat based on the map"
+  },
+  "extTitle": {
+    "message": "Faceit Map Position"
+  },
+  "enabledTitle": {
+    "message": "Extension active"
+  },
+  "enabledDesc": {
+    "message": "Auto-send position to chat"
+  },
+  "mapSettings": {
+    "message": "Map Settings"
+  },
+  "addMap": {
+    "message": "Add map"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "reset": {
+    "message": "Reset"
+  },
+  "saved": {
+    "message": "Saved!"
+  },
+  "addAtLeastOne": {
+    "message": "Add at least one map"
+  },
+  "resetConfirm": {
+    "message": "Reset all settings?"
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "welcomeText": {
+    "message": "This extension has no viruses, keyloggers, or miners. It is fully open source. Report bugs in Issues, suggest ideas in Discussions, submit features via Pull Requests."
+  },
+  "welcomeIssues": {
+    "message": "Issues"
+  },
+  "welcomeDiscussions": {
+    "message": "Discussions"
+  },
+  "welcomePullRequests": {
+    "message": "Pull Requests"
+  },
+  "introTitle": {
+    "message": "Welcome to Faceit Map Position"
+  },
+  "introGotIt": {
+    "message": "Got it"
+  }
+}
